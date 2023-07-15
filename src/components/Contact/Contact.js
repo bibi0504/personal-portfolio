@@ -1,6 +1,6 @@
 import React from 'react';
 import { popupFromBottomForText } from '@/content/framerMotionVariants';
-import AnimatedHeading from './FramerMotion/AnimatedHeading';
+import AnimatedHeading from '@/components/FramerMotion/AnimatedHeading';
 import ContactForm from './ContactForm';
 import AnimatedText from '../FramerMotion/AnimatedText';
 import 'react-toastify/dist/ReactToastify.css';
@@ -13,12 +13,10 @@ export default function Contact() {
                     Get in touch
                 </AnimatedHeading>
 
-                <AnimatedText
-                    variants={popupFromBottomForText}
-                    className="px-4 py-2 font-medium text-slate-400"
-                >
-                    Have a little something, something you wanna talk about? Please feel free to get
-                    in touch anytime, whether for work or to just Hi 🙋‍♂️.
+                <AnimatedText variants={popupFromBottomForText} className="px-4 py-2 font-medium">
+                    Is there something on your mind you'd like to talk about? Whether it's related
+                    to work or just a casual conversation, I am here and ready to listen. Please
+                    don't hesitate to reach out to me at any time. 🙋‍♂️.
                 </AnimatedText>
             </section>
 

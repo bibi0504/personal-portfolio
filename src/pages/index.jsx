@@ -11,6 +11,7 @@ import MetaData from '@/components/MetaData';
 import pageMeta from '@/content/meta';
 import Link from 'next/link';
 import SkillSection from '@/components/Home/SkillSection';
+import Contact from '@/components/Contact/Contact';
 
 export default function Home() {
     return (
@@ -58,7 +59,7 @@ export default function Home() {
                             </div>
                             <motion.p
                                 variants={opacityVariant}
-                                className=" text-slate-500 dark:text-gray-300 font-medium text-sm md:text-base text-center"
+                                className=" text-white-500 dark:text-gray-300 font-medium text-sm md:text-base text-center"
                             >
                                 I am working as freelancer. And I can code in Javascript,
                                 Typescript, Python, C# and etc.
@@ -78,6 +79,7 @@ export default function Home() {
                 </motion.section>
 
                 <SkillSection />
+                <Contact />
             </div>
         </>
     );

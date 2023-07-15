@@ -1,15 +1,16 @@
 import { motion } from 'framer-motion';
 
-export default function AnimatedInput({ infinity, className, variants, options, onChange }) {
+export default function AnimatedDiv({ variants, className, children, infinity }) {
     return (
-        <motion.input
+        <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: !infinity }}
             variants={variants}
             className={className}
-            onChange={onChange}
-            {...options}
-        />
+            transition={{ staggerChildren: 0.5 }}
+        >
+            {children}
+        </motion.div>
     );
 }
