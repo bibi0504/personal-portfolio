@@ -61,7 +61,11 @@ export default function Footer({ setShowQR, showQR }) {
 
 function FooterLink({ route, text }) {
     return (
-        <Link href={`/${route}`} passHref className="hover:text-black dark:hover:text-white w-fit">
+        <Link
+            href={`/${route === 'home' ? '' : route}`}
+            passHref
+            className="hover:text-black dark:hover:text-white w-fit"
+        >
             <motion.p variants={popup}>{text}</motion.p>
         </Link>
     );

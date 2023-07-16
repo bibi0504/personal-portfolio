@@ -3,12 +3,12 @@ import { AnimatePresence } from 'framer-motion';
 import Project from '@/components/Project';
 import MetaData from '@/components/MetaData';
 import PageTop from '@/components/PageTop';
-import { getProjects } from '@/lib/dataFetch';
 import AnimatedDiv from '@/components/FramerMotion/AnimatedDiv';
 import { FadeContainer } from '@/content/framerMotionVariants';
+import projects from '@/content/projects';
 import pageMeta from '@/content/meta';
 
-export default function Projects({ projects }) {
+export default function Projects() {
     return (
         <>
             <MetaData
@@ -43,11 +43,4 @@ export default function Projects({ projects }) {
             </section>
         </>
     );
-}
-
-export async function getStaticProps() {
-    const projects = getProjects();
-    return {
-        props: { projects },
-    };
 }

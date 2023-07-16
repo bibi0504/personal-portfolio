@@ -1,1 +1,1 @@
-export const navigationRoutes = ['home', 'about', 'utils', 'blogs', 'projects', 'rss'];
+export const navigationRoutes = ['home', 'about', 'utilities', 'blogs', 'projects', 'rss'];
