@@ -1,6 +1,6 @@
 # Portfolio and Blog
 
-This is my persnal portfolio and blog site project.
+This is my persnal updated portfolio and blog site project.
 
 ## I used
 - Next.js
