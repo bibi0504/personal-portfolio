@@ -1,6 +1,5 @@
 import path from 'path';
-import { readFileSync } from 'fs';
-import { sync } from 'glob';
+import { readFileSync, readdirSync } from 'fs';
 import matter from 'gray-matter';
 import { serialize } from 'next-mdx-remote/serialize';
 import rehypeSlug from 'rehype-slug';
@@ -8,20 +7,16 @@ import readTime from 'reading-time';
 import rehypePrettyCode from 'rehype-pretty-code';
 
 export default class MDXContent {
-    /* Takes folder as argument and find all the files inside that */
-    constructor(folderName) {
-        this.POST_PATH = path.join(process.cwd(), folderName);
+    constructor() {
+        this.POST_PATH = path.join(process.cwd(), 'src', 'posts');
     }
 
-    /* Get all the slugs in the requested folder which has .mdx extension
-     * It splits the path and gets only the slug part
-     */
+    // get all slugs
     getSlugs() {
-        const paths = sync(`${this.POST_PATH}/*.mdx`);
+        const paths = readdirSync(this.POST_PATH);
 
-        return paths.map((path) => {
-            const parts = path.split('/');
-            const fileName = parts[parts.length - 1];
+        return paths.map((fullPath) => {
+            const fileName = path.basename(fullPath);
             const [slug, _ext] = fileName.split('.');
 
             return slug;
@@ -41,8 +36,7 @@ export default class MDXContent {
                 readingTime,
                 excerpt: data.excerpt ?? '',
                 title: data.title ?? slug,
-                data: (data.date ?? new Date()).toString(),
-                stringDate: data.stringDate ?? '',
+                date: (data.date ?? new Date()).toString(),
                 keywords: data.keywords ?? '',
                 image: data.image ?? '/images/posts/not_found.png',
             };
@@ -93,12 +87,7 @@ export default class MDXContent {
         };
     }
 
-    /* Getting all posts
-        - First find all slugs
-        - then map for each slug and get the front matter of that post
-        - then filter the posts by date
-        - return as an array
-    */
+    // get all posts
     getAllPosts() {
         const posts = this.getSlugs()
             .map((slug) => {

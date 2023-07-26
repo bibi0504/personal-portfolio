@@ -4,7 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { useDarkMode } from '@/context/darkMode';
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
-import { FadeContainer, mobileNavItemSideways } from '@/content/framerMotionVariants';
+import { fadeContainer, mobileNavItemSideways } from '@/content/framerMotionVariants';
 
 const initialFormState = {
     toName: 'Minato Hayashi',
@@ -68,7 +68,7 @@ export default function ContactForm() {
             <motion.form
                 initial="hidden"
                 whileInView="visible"
-                variants={FadeContainer}
+                variants={fadeContainer}
                 viewport={{ once: true }}
                 className="w-full flex flex-col items-center max-w-xl mx-auto my-10 dark:text-gray-300"
                 onSubmit={sendEmail}

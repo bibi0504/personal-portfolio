@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, useAnimation, AnimatePresence } from 'framer-motion';
 import {
-    FadeContainer,
+    fadeContainer,
     hamFastFadeContainer,
     mobileNavItemSideways,
     popup,
@@ -97,7 +97,7 @@ export default function TobNavbar() {
                 <motion.div
                     initial="hidden"
                     animate="visible"
-                    variants={FadeContainer}
+                    variants={fadeContainer}
                     className="flex items-center md:gap-2"
                 >
                     {navigationRoutes.slice(0, 5).map((link, index) => {

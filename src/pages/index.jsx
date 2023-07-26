@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import {
-    FadeContainer,
+    fadeContainer,
     popup,
     opacityVariant,
     fromLeftVariant,
@@ -22,7 +22,7 @@ export default function Home() {
                 <motion.section
                     initial="hidden"
                     whileInView="visible"
-                    variants={FadeContainer}
+                    variants={fadeContainer}
                     viewport={{ once: true }}
                     className="grid place-content-center py-20 min-h-screen"
                 >
