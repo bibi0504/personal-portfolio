@@ -1,9 +1,6 @@
 import Head from 'next/head';
-import useWindowLocation from '@/hooks/useWindowLocation';
 
-export default function MetaData({ title, description, keywords }) {
-    const { currentURL } = useWindowLocation();
-
+export default function MetaData({ title, description, keywords, suffix }) {
     return (
         <Head>
             <meta charSet="utf-8" />
@@ -13,7 +10,7 @@ export default function MetaData({ title, description, keywords }) {
             />
             <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
             <meta name="description" content={description || 'Minato Hayashi'} />
-            <title>{`${title || ''} Minato Hayashi`}</title>
+            <title>{title || 'Minato Hayashi'}</title>
             <meta name="theme-color" content="#000" />
             <link rel="shortcut icon" href="/favicon.ico" />
             <link rel="manifest" href="/manifest.json" />

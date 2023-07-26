@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { FadeContainer, popup } from '@/content/framerMotionVariants';
+import { fadeContainer, popup } from '@/content/framerMotionVariants';
 import { navigationRoutes } from '@/utils/utils';
 import socialMedia from '@/content/socialMedia';
 import { HiOutlineQrcode } from 'react-icons/hi';
@@ -11,9 +11,9 @@ export default function Footer({ setShowQR, showQR }) {
             <motion.div
                 initial="hidden"
                 whileInView="visible"
-                variants={FadeContainer}
+                variants={fadeContainer}
                 viewport={{ once: true }}
-                className="max-w-4xl 2xl:max-w-5xl 3xl:max-w-7xl px-5 py-7 border-t-2 border-gray-200  dark:border-gray-400/10 mx-auto text-sm sm:text-base flex flex-col gap-5"
+                className="max-w-4xl 2xl:max-w-5xl 3xl:max-w-7xl px-5 py-9 border-t-2 border-gray-200  dark:border-gray-400/10 mx-auto text-sm sm:text-base flex flex-col gap-5"
             >
                 <section className="grid grid-cols-3 gap-10">
                     <div className="flex flex-col gap-4 capitalize">

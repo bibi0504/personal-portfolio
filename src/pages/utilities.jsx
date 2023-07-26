@@ -5,7 +5,7 @@ import Link from 'next/link';
 import AnimatedText from '@/components/FramerMotion/AnimatedText';
 import AnimatedDiv from '@/components/FramerMotion/AnimatedDiv';
 import {
-    FadeContainer,
+    fadeContainer,
     opacityVariant,
     popup,
     popupFromBottomForText,
@@ -45,7 +45,7 @@ export default function Utilities() {
 function UtilitySection({ utility }) {
     return (
         <AnimatedDiv
-            variants={FadeContainer}
+            variants={fadeContainer}
             className="!w-full selection:bg-blue-300 dark:selection:bg-blue-900 dark:selection:text-gray-400 dark:text-neutral-200 font-medium"
         >
             <motion.h2
@@ -56,7 +56,7 @@ function UtilitySection({ utility }) {
             </motion.h2>
 
             <AnimatedDiv
-                variants={FadeContainer}
+                variants={fadeContainer}
                 className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-3 mt-5"
             >
                 {utility.data.map((item) => {

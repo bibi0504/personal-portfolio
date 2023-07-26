@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FadeContainer, popup } from '@/content/framerMotionVariants';
+import { fadeContainer, popup } from '@/content/framerMotionVariants';
 import HomeHeading from './HomeHeading';
 import { useDarkMode } from '@/context/darkMode';
 import * as WindowsAnimation from '@/lib/windowsAnimation';
@@ -15,7 +15,7 @@ export default function SkillSection() {
             <motion.div
                 initial="hidden"
                 whileInView="visible"
-                variants={FadeContainer}
+                variants={fadeContainer}
                 viewport={{ once: true }}
                 className="grid my-10 gap-4 grid-cols-3"
             >

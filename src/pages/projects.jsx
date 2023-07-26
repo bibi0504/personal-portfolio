@@ -4,7 +4,7 @@ import Project from '@/components/Project';
 import MetaData from '@/components/MetaData';
 import PageTop from '@/components/PageTop';
 import AnimatedDiv from '@/components/FramerMotion/AnimatedDiv';
-import { FadeContainer } from '@/content/framerMotionVariants';
+import { fadeContainer } from '@/content/framerMotionVariants';
 import projects from '@/content/projects';
 import pageMeta from '@/content/meta';
 
@@ -29,7 +29,7 @@ export default function Projects() {
                 </PageTop>
 
                 <AnimatedDiv
-                    variants={FadeContainer}
+                    variants={fadeContainer}
                     className="grid grid-cols-1 gap-4 mx-auto md:ml-[20%] xl:ml-[24%]"
                 >
                     <AnimatePresence>

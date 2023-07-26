@@ -1,4 +1,4 @@
-export const FadeContainer = {
+export const fadeContainer = {
     hidden: { opacity: 0 },
     visible: {
         opacity: 1,
