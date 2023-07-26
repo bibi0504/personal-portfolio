@@ -34,7 +34,7 @@ export default class MDXContent {
             return {
                 slug,
                 readingTime,
-                excerpt: data.excerpt ?? '',
+                description: data.description ?? '',
                 title: data.title ?? slug,
                 date: (data.date ?? new Date()).toString(),
                 keywords: data.keywords ?? '',

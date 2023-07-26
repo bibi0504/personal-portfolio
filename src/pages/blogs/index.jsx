@@ -9,6 +9,7 @@ import {
 } from '@/content/framerMotionVariants';
 import { RiCloseCircleLine } from 'react-icons/ri';
 import { BiRss } from 'react-icons/bi';
+import { BsBookmark } from 'react-icons/bs';
 import Blog from '@/components/Blog';
 import MetaData from '@/components/MetaData';
 import AnimatedDiv from '@/components/FramerMotion/AnimatedDiv';
@@ -104,6 +105,14 @@ export default function Blogs({ blogs }) {
                                     </motion.h3>
 
                                     <div className="flex items-center gap-2">
+                                        <Link href="/blogs/bookmark" passHref>
+                                            <motion.p variants={popup}>
+                                                <BsBookmark
+                                                    title="Bookmark"
+                                                    className="text-2xl cursor-pointer"
+                                                />
+                                            </motion.p>
+                                        </Link>
                                         <Link href="/rss" passHref>
                                             <motion.p variants={popup}>
                                                 <BiRss

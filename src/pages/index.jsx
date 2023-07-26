@@ -12,6 +12,7 @@ import pageMeta from '@/content/meta';
 import Link from 'next/link';
 import SkillSection from '@/components/Home/SkillSection';
 import Contact from '@/components/Contact/Contact';
+import getRSS from '@/lib/generateRssFeed';
 
 export default function Home() {
     return (
@@ -83,4 +84,8 @@ export default function Home() {
             </div>
         </>
     );
+}
+
+export async function getStaticProps() {
+    await getRSS();
 }
