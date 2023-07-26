@@ -1,10 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { getFormattedDate } from '@/utils/date';
+import useBookmarkedBlogs from '@/hooks/useBookmarkBlogs';
 
 export default function Blog({ blog }) {
-    console.log(blog);
-
     return (
         <article className="bg-white dark:bg-darkSecondary rounded-2xl p-2 flex flex-col sm:flex-row items-center w-full sm:w-[95%] mx-auto gap-2 md:gap-7 shadow-md md:shadow-lg">
             <div className="w-full">
@@ -28,7 +27,7 @@ export default function Blog({ blog }) {
                     {blog.title}
                 </Link>
                 <p className="mt-3 text-sm sm:text-xs md:text-sm text-gray-600 dark:text-[#b5b7ba] line-clamp-3 sm:line-clamp-2 md:line-clamp-4 mb-2">
-                    {blog.excerpt}
+                    {blog.description}
                 </p>
 
                 <div className="flex items-center justify-between mt-auto">

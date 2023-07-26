@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import NProgress from 'nprogress';
 import { DarkModeProvider } from '@/context/darkMode';
-import Layout from '@/layout/Layout';
+import Layout from '@/layout/BasicLayout';
 import '@/styles/globals.css';
 import 'nprogress/nprogress.css';
 

@@ -7,8 +7,8 @@ import readTime from 'reading-time';
 import rehypePrettyCode from 'rehype-pretty-code';
 
 export default class MDXContent {
-    constructor() {
-        this.POST_PATH = path.join(process.cwd(), 'src', 'posts');
+    constructor(folderName) {
+        this.POST_PATH = path.join(process.cwd(), 'src', 'data', folderName);
     }
 
     // get all slugs
@@ -34,7 +34,7 @@ export default class MDXContent {
             return {
                 slug,
                 readingTime,
-                excerpt: data.excerpt ?? '',
+                description: data.description ?? '',
                 title: data.title ?? slug,
                 date: (data.date ?? new Date()).toString(),
                 keywords: data.keywords ?? '',
