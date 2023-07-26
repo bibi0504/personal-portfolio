@@ -146,7 +146,7 @@ export default function Blogs({ blogs }) {
 }
 
 export async function getStaticProps() {
-    const blogs = new MDXContent().getAllPosts();
+    const blogs = new MDXContent('posts').getAllPosts();
 
     return {
         props: {

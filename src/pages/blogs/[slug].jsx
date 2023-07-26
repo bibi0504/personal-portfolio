@@ -29,7 +29,7 @@ export default function BlogPost({ post, error }) {
 // generating the page for each post
 export async function getStaticProps({ params }) {
     const { slug } = params;
-    const { post } = await new MDXContent().getPostFromSlug(slug);
+    const { post } = await new MDXContent('posts').getPostFromSlug(slug);
 
     if (post != null) {
         return {
@@ -53,7 +53,7 @@ export async function getStaticProps({ params }) {
 
 // generating all possible paths for the slug
 export async function getStaticPaths() {
-    const paths = new MDXContent().getSlugs().map((slug) => ({
+    const paths = new MDXContent('posts').getSlugs().map((slug) => ({
         params: {
             slug,
         },

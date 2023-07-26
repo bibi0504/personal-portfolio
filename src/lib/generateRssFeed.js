@@ -3,8 +3,8 @@ import MDXContent from '@/lib/mdxContent';
 import RSS from 'rss';
 
 export default async function getRSS() {
-    const siteURL = 'https://minatohayashi.github.io';
-    const allBlogs = new MDXContent().getAllPosts();
+    const siteURL = 'https://minatohayashi.com';
+    const allBlogs = new MDXContent('posts').getAllPosts();
 
     // create a new RSS feed object
     const feed = new RSS({

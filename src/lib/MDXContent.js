@@ -7,8 +7,8 @@ import readTime from 'reading-time';
 import rehypePrettyCode from 'rehype-pretty-code';
 
 export default class MDXContent {
-    constructor() {
-        this.POST_PATH = path.join(process.cwd(), 'src', 'posts');
+    constructor(folderName) {
+        this.POST_PATH = path.join(process.cwd(), 'src', 'data', folderName);
     }
 
     // get all slugs

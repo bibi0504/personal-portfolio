@@ -1,10 +1,5 @@
 import Image from 'next/image';
-import {
-    fadeContainer,
-    popup,
-    opacityVariant,
-    fromLeftVariant,
-} from '@/content/framerMotionVariants';
+import { fadeContainer, popup, opacityVariant } from '@/content/framerMotionVariants';
 import { motion } from 'framer-motion';
 import { FiDownload } from 'react-icons/fi';
 import MetaData from '@/components/MetaData';
@@ -13,6 +8,7 @@ import Link from 'next/link';
 import SkillSection from '@/components/Home/SkillSection';
 import Contact from '@/components/Contact/Contact';
 import getRSS from '@/lib/generateRssFeed';
+import generateSitemap from '@/lib/sitemap';
 
 export default function Home() {
     return (
@@ -88,4 +84,9 @@ export default function Home() {
 
 export async function getStaticProps() {
     await getRSS();
+    await generateSitemap();
+
+    return {
+        props: {},
+    };
 }
