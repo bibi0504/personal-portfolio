@@ -17,7 +17,7 @@ export default async function generateSitemap() {
         .map((page) => {
             return `
     <url>
-        <loc>${`https://minatohayashi.com/${page}`}</loc>
+        <loc>${`https://minato-portfolio.onrender.com/${page}`}</loc>
     </url>`;
         })
         .join('')}
