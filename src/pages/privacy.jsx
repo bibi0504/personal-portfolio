@@ -1,4 +1,4 @@
-import MDXContent from '@/lib/mdxContent';
+import MDXContent from '@/lib/mdxContents';
 import StaticPage from '@/components/StaticPage';
 import pageMeta from '@/content/meta';
 

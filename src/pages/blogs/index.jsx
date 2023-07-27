@@ -14,7 +14,7 @@ import Blog from '@/components/Blog';
 import MetaData from '@/components/MetaData';
 import AnimatedDiv from '@/components/FramerMotion/AnimatedDiv';
 import PageTop from '@/components/PageTop';
-import MDXContent from '@/lib/mdxContent';
+import MDXContent from '@/lib/mdxContents';
 import pageMeta from '@/content/meta';
 
 export default function Blogs({ blogs }) {
