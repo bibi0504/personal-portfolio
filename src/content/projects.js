@@ -18,6 +18,15 @@ export default [
         keywords: ['laravel 10', 'react.js', 'intertia.js'],
     },
     {
+        name: 'Personal Portfolio',
+        coverUrl: '/images/portfolio/portfolio.png',
+        description:
+            'I have created this website using Next.js and MDX to showcase my work and blogs. Explore my projects and get a glimpse of my skills and expertise.',
+        githubUrl: 'https://github.com/bibi0504/personal-portfolio',
+        previewUrl: 'http://minato.hayashi.io/',
+        keywords: ['next.js', 'mdx', 'tailwindcss', 'framer-motion'],
+    },
+    {
         name: 'React Boilerplate',
         coverUrl: '/images/portfolio/react-boilerplate.png',
         description:
