@@ -1,5 +1,5 @@
 import { writeFileSync } from 'fs';
-import MDXContent from '@/lib/mdxContents';
+import MDXContent from '@/lib/mdxContent';
 import RSS from 'rss';
 
 export default async function getRSS() {

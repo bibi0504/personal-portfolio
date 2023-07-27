@@ -1,7 +1,7 @@
 import BlogLayout from '@/layout/BlogLayout';
 import MetaData from '@/components/MetaData';
 import PageNotFound from '@/pages/404';
-import MDXContent from '@/lib/mdxContents';
+import MDXContent from '@/lib/mdxContent';
 import { MDXRemote } from 'next-mdx-remote';
 import 'highlight.js/styles/atom-one-dark.css';
 

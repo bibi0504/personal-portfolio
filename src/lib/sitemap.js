@@ -1,6 +1,6 @@
 import path from 'path';
 import { writeFileSync, readdirSync } from 'fs';
-import MDXContent from './mdxContents';
+import MDXContent from './mdxContent';
 
 export default async function generateSitemap() {
     const PAGE_PATH = path.join(process.cwd(), 'src', 'pages');
