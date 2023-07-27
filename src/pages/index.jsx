@@ -29,7 +29,7 @@ export default function Home() {
                             className="relative w-44 h-44 xs:w-52 xs:h-52 flex justify-center items-center rounded-full p-3 before:absolute before:inset-0 before:border-t-4 before:border-b-4 before:border-black before:dark:border-white before:rounded-full before:animate-photo-spin"
                         >
                             <Image
-                                src="/images/profile.jpg"
+                                src="/images/profile.png"
                                 className="rounded-full filter saturate-0"
                                 width={400}
                                 height={400}

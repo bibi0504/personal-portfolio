@@ -37,7 +37,7 @@ export default function Blog({ blog }) {
                                 alt="Minato Hayashi"
                                 height={933}
                                 width={933}
-                                src="/images/profile.jpg"
+                                src="/images/profile.png"
                                 className="rounded-full !m-0 h-full"
                             />
                         </div>

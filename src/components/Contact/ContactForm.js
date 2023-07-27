@@ -22,25 +22,31 @@ export default function ContactForm() {
 
     const sendEmail = (e) => {
         e.preventDefault();
-        setLoading(true);
 
-        emailjs
-            .send(
-                process.env.NEXT_PUBLIC_YOUR_SERVICE_ID,
-                process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID,
-                emailInfo,
-                process.env.NEXT_PUBLIC_YOUR_USER_ID
-            )
-            .then((res) => {
-                setLoading(false);
-                setEmailInfo(initialFormState);
-                toast.success('Message Sent.');
-            })
-            .catch((err) => {
-                console.log(err.text);
-                setLoading(false);
-                toast.error('😥 ' + err.text);
-            });
+        if (validateForm()) {
+            // setLoading(true);
+            // emailjs
+            //     .send(
+            //         process.env.NEXT_PUBLIC_YOUR_SERVICE_ID,
+            //         process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID,
+            //         emailInfo,
+            //         process.env.NEXT_PUBLIC_YOUR_USER_ID
+            //     )
+            //     .then((res) => {
+            //         setLoading(false);
+            //         setEmailInfo(initialFormState);
+            //         toast.success('Message Sent.');
+            //     })
+            //     .catch((err) => {
+            //         console.log(err.text);
+            //         setLoading(false);
+            //         toast.error('😥 ' + err.text);
+            //     });
+
+            toast.success('Message Sent.');
+        } else {
+            toast.error('Looks like you have not filled the form');
+        }
     };
 
     const validateForm = () => {
@@ -53,16 +59,6 @@ export default function ContactForm() {
         return true;
     };
 
-    const submitFormOnEnter = (e) => {
-        if ((e.keyCode == 10 || e.keyCode == 13) && e.ctrlKey) {
-            if (validateForm()) {
-                return sendEmail(e);
-            }
-        }
-
-        toast.error('Looks like you have not filled the form');
-    };
-
     return (
         <>
             <motion.form
@@ -72,7 +68,6 @@ export default function ContactForm() {
                 viewport={{ once: true }}
                 className="w-full flex flex-col items-center max-w-xl mx-auto my-10 dark:text-gray-300"
                 onSubmit={sendEmail}
-                onKeyDown={submitFormOnEnter}
             >
                 <div className="w-full grid grid-cols-2 gap-6">
                     <motion.div
