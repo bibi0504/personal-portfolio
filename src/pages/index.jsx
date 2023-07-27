@@ -26,11 +26,11 @@ export default function Home() {
                     <div className="w-full relative mx-auto flex flex-col items-center gap-10">
                         <motion.div
                             variants={popup}
-                            className="relative w-44 h-44 xs:w-52 xs:h-52 flex justify-center items-center rounded-full p-3 before:absolute before:inset-0 before:border-t-4 before:border-b-4 before:border-black before:dark:border-white before:rounded-full before:animate-photo-spin"
+                            className="relative w-44 h-44 xs:w-52 xs:h-52 flex justify-center items-center rounded-full p-3 before:absolute before:inset-0 before:border-t-4 before:border-b-4 before:border-gray-600 before:dark:border-white before:rounded-full before:animate-photo-spin"
                         >
                             <Image
                                 src="/images/profile.png"
-                                className="rounded-full filter saturate-0"
+                                className="rounded-full"
                                 width={400}
                                 height={400}
                                 alt="cover Profile Image"
