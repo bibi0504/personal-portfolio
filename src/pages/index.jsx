@@ -30,7 +30,7 @@ export default function Home() {
                         >
                             <Image
                                 src="/images/profile.png"
-                                className="rounded-full"
+                                className="rounded-full filter saturate-0"
                                 width={400}
                                 height={400}
                                 alt="cover Profile Image"
