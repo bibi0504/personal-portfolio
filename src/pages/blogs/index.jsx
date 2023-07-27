@@ -113,7 +113,7 @@ export default function Blogs({ blogs }) {
                                                 />
                                             </motion.p>
                                         </Link>
-                                        <Link href="/rss" passHref>
+                                        <Link href="/feed.xml" passHref>
                                             <motion.p variants={popup}>
                                                 <BiRss
                                                     title="RSS"

@@ -23,7 +23,7 @@ export default function BlogLayout({ post, children }) {
     return (
         <section className="mt-[44px] md:mt-[60px] relative !overflow-hidden">
             <section
-                className="p-5 sm:pt-10 relative font-barlow prose-sm dark:prose-invert print:!mx-auto"
+                className="p-5 sm:pt-10 relative font-barlow prose-base dark:prose-invert print:!mx-auto"
                 style={{ maxWidth: '800px', margin: 'auto' }}
             >
                 <ScrollProgressBar />
@@ -88,7 +88,7 @@ export default function BlogLayout({ post, children }) {
                 </div>
                 <AnimatedDiv
                     variants={opacityVariant}
-                    className="max-w-full prose-sm blog-container sm:prose-base prose-pre:bg-white prose-img:mx-auto prose-img:rounded-md dark:prose-pre:bg-darkSecondary prose-pre:saturate-150 dark:prose-pre:saturate-100 marker:text-black dark:marker:text-white prose-h4:!mb-6"
+                    className="max-w-full prose-base blog-container prose-pre:bg-white prose-img:mx-auto prose-img:rounded-md dark:prose-pre:bg-darkSecondary prose-pre:saturate-150 dark:prose-pre:saturate-100 marker:text-black dark:marker:text-white prose-h4:!mb-6"
                 >
                     {children}
                 </AnimatedDiv>
