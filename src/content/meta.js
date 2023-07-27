@@ -28,12 +28,17 @@ export default {
         title: 'About',
         description:
             'Hey, I am Minato Hayashi. A Front-end Developer/React Developer from Japan who loves to design and code. I use React.js or Next.js to build the web application interfaces and the functionalities.',
-        keywords: 'about',
+        keywords: 'about,',
     },
     privacy: {
         title: 'Privacy Policy',
         description:
             'Privacy is an important factor for everyone. Following is the privacy policies of my portfolio.',
-        keywords: 'privacy,privacy policies',
+        keywords: 'privacy,privacy policies,',
+    },
+    bookmark: {
+        title: 'Bookmarked Blogs',
+        description: "Bookmarked Blogs of Minato Hayashi's blogs by you",
+        keywords: 'bookmark,blogs,',
     },
 };

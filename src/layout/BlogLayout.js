@@ -40,7 +40,7 @@ export default function BlogLayout({ post, children }) {
                                     height={933}
                                     width={933}
                                     alt="Minato Hayashi"
-                                    src="/images/profile.jpg"
+                                    src="/images/profile.png"
                                     className="rounded-full !m-0"
                                 />
                             </div>
@@ -74,8 +74,8 @@ export default function BlogLayout({ post, children }) {
                             className="transition active:scale-75 mt-2 sm:mt-1"
                             onClick={() => {
                                 alreadyBookmarked
-                                    ? removeFromBookmark(post.meta.slug)
-                                    : addToBookmark(post.meta.slug);
+                                    ? removeFromBookmark(post.meta)
+                                    : addToBookmark(post.meta);
                             }}
                         >
                             {alreadyBookmarked ? (

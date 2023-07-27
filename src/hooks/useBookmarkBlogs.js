@@ -27,7 +27,7 @@ const useBookmarkedBlogs = (key, defaultValue) => {
     // add blog as bookmark
     const addToBookmark = (blogToBookmark) => {
         const data = getValue();
-        if (!data.includes(blogToBookmark)) {
+        if (data.filter((blog) => blog.slug === blogToBookmark.slug).length === 0) {
             data.unshift(blogToBookmark);
             setBookmarkedBlogs(data);
         }
@@ -36,11 +36,11 @@ const useBookmarkedBlogs = (key, defaultValue) => {
     // remove blog from bookmark
     const removeFromBookmark = (blogToRemove) => {
         const data = getValue();
-        setBookmarkedBlogs(data.filter((blog) => blog !== blogToRemove));
+        setBookmarkedBlogs(data.filter((blog) => blog.slug !== blogToRemove.slug));
     };
 
     const isAlreadyBookmarked = (searchBySlug) => {
-        return bookmarkedBlogs.map((blog) => blog === searchBySlug).includes(true);
+        return bookmarkedBlogs.map((blog) => blog.slug === searchBySlug).includes(true);
     };
 
     useEffect(() => {

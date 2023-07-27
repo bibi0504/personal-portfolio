@@ -1,7 +1,5 @@
-import { useEffect } from 'react';
 import BlogLayout from '@/layout/BlogLayout';
 import MetaData from '@/components/MetaData';
-// import MDX from '@/components/MDX';
 import PageNotFound from '@/pages/404';
 import MDXContent from '@/lib/mdxContent';
 import { MDXRemote } from 'next-mdx-remote';
