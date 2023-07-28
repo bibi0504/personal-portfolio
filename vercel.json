@@ -12,7 +12,7 @@
             ]
         },
         {
-            "source": "/fonts/Sarina/Sarina-400.woff2",
+            "source": "/fonts/Sarina-400.woff2",
             "headers": [
                 {
                     "key": "Cache-Control",

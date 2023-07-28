@@ -15,7 +15,7 @@ export default function Document() {
                 {/* Sarina */}
                 <link
                     rel="preload"
-                    href="/fonts/Sarina/Sarina-400.woff2"
+                    href="/fonts/Sarina-400.woff2"
                     as="font"
                     type="font/woff2"
                     crossOrigin="anonymous"
