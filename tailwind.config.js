@@ -11,7 +11,6 @@ module.exports = {
         fontFamily: {
             inter: ['Inter', 'sans-serif'],
             sarina: ['Sarina', 'cursive'],
-            barlow: ['Barlow', 'sans-serif'],
             mono: ['monospace'],
         },
         extend: {

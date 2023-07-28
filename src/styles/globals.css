@@ -9,41 +9,6 @@
 }
 
 @font-face {
-    font-family: 'Barlow';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(/fonts/Barlow/Barlow-400.woff2) format('woff2');
-}
-@font-face {
-    font-family: 'Barlow';
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: url(/fonts/Barlow/Barlow-500.woff2) format('woff2');
-}
-@font-face {
-    font-family: 'Barlow';
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url(/fonts/Barlow/Barlow-600.woff2) format('woff2');
-}
-@font-face {
-    font-family: 'Barlow';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url(/fonts/Barlow/Barlow-700.woff2) format('woff2');
-}
-@font-face {
-    font-family: 'Barlow';
-    font-style: normal;
-    font-weight: 800;
-    font-display: swap;
-    src: url(/fonts/Barlow/Barlow-800.woff2) format('woff2');
-}
-@font-face {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 100 900;
@@ -55,7 +20,7 @@
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url(/fonts/Sarina/Sarina-400.woff2) format('woff2');
+    src: url(/fonts/Sarina-400.woff2) format('woff2');
 }
 
 body,
@@ -245,7 +210,7 @@ code > .line::before {
         @apply bg-white dark:bg-darkSecondary p-5 sm:p-10 flex flex-col sm:flex-row gap-8 items-center max-w-2xl shadow-md rounded-lg mt-[30%] sm:mt-8 transition-all;
     }
     .blog-container {
-        @apply !w-full my-5 font-medium;
+        @apply !w-full my-5;
     }
 }
 

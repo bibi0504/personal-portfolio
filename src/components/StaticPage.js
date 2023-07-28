@@ -13,7 +13,7 @@ export default function StaticPage({ meta, page }) {
                 <PageTop pageTitle={page.meta.title} />
                 <AnimatedDiv
                     variants={opacityVariant}
-                    className="max-w-full prose-base dark:prose-invert"
+                    className="max-w-full prose dark:prose-invert"
                 >
                     <MDXRemote {...page.content} frontmatter={page.meta} />
                 </AnimatedDiv>

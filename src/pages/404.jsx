@@ -8,7 +8,7 @@ export default function PageNotFound() {
             <MetaData title="404 - Page not found" description="Page not found" />
 
             <section className="pageTop flex flex-col gap-5 md:pt-20">
-                <h1 className="font-bold font-barlow text-3xl md:text-5xl uppercase dark:text-white">
+                <h1 className="font-bold text-3xl md:text-5xl uppercase dark:text-white">
                     Stay calm and don't freak out!
                 </h1>
                 <p className="font-inter text-gray-500 dark:text-gray-400/70">
