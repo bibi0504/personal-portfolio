@@ -50,7 +50,7 @@ function UtilitySection({ utility }) {
         >
             <motion.h2
                 variants={popupFromBottomForText}
-                className="font-bold text-2xl sm:text-3xl font-barlow mb-4"
+                className="font-bold text-2xl sm:text-3xl mb-4"
             >
                 {utility.title}
             </motion.h2>
