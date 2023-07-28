@@ -270,3 +270,15 @@ code > .line::before {
         margin: 0;
     }
 }
+
+.prose a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+code,
+blockquote {
+    color: unset !important;
+}
