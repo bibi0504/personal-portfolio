@@ -70,19 +70,22 @@ has the following format.
 
 Action objects must have `a type `field, and other values can be entered as desired by the developer.
 
-`example:`
+`example`
 
-```javascript
+```json
 {
-    type : "ADD_TODO" ,
-    data : {
-        id : 0 ,
-        text : "Learn Redux"
+    "type": "ADD_TODO",
+    "data": {
+        "id": 0,
+        "text": "Learn Redux"
     }
 }
+```
+
+```json
 {
-    type : "CHANGE_INPUT" ,
-    text : "no"
+    "type": "CHANGE_INPUT",
+    "text": "no"
 }
 ```
 
@@ -126,7 +129,7 @@ implementing it.
 In Redux, you create one store per application. Inside the store, we
 have the current app state, our reducers, plus a few built-in functions.
 
-### dispatch
+### Dispatch
 
 Dispatch is one of the store\'s built-in functions. You can understand
 dispatch as triggering an action. The action is passed as a parameter to
@@ -136,7 +139,7 @@ When you call it like that, the store executes the reducer function and
 creates a new state by referring to the action if there is logic that
 handles that action.
 
-### subscribe
+### Subscribe
 
 Subscriptions are also one of the store\'s built-in functions. The
 subscribe function receives a function-type value as a parameter. If you
