@@ -1,0 +1,144 @@
+---
+slug: introduction-redux-1
+title: Introducing Redux (1)
+date: 2021-06-12
+published: true
+keywords: react,redux,
+description: Redux is a highly popular state management library. It allows you to separate the logic related to components into different files, resulting in a more organized code structure.
+image: '/images/posts/introduction-redux-1.png'
+---
+
+## 1-1. Introduction to Redux
+
+Redux is the most used state management library. With Redux, you can separate the state-related logic of your components into different files
+and manage them more efficiently. Also, when components share state, the state value can be easily passed without going through multiple
+components.
+
+In addition, Redux\'s middleware makes scalable tasks such as asynchronous operations and logging easier. More on this middleware
+later!
+
+### Determining the need
+
+Redux is very effective when it comes to global state management. Of course, using Redux isn\'t the only solution. As a reminder, the same
+can be done through the Context API.
+
+First, let\'s look at the component structure of the ToDo List app.
+
+In the todo list, when we add a value to a todo item in CreateForm, the handleCreate function passed to CreateForm from App is called, and when
+this function is called, the todos value in the App\'s state is updated.
+
+When the value of todos is updated, the corresponding value is passed to the TodoList so that all the Todo items we created will appear properly.
+
+Looking at the structure above, the parent component called App acted as a middleman to exchange data between CreateForm and TodoList.
+
+As above, a project with a simple structure does not need to use a separate state management library for global state management.
+
+But, what if the component structure was just a little bit more complex?
+
+The Root component has a state value called something, and a function called onDoSomething changes the value of something.
+
+onDoSomething is passed to Root -\> B -\> H , and when an event occurs in H and this function is called, something is passed to Root -\> A -\>
+E -\> F .
+
+In order for the props to be properly delivered to the required place, having to go through a component that does not actually use the props is
+inefficient and very cumbersome when re-rendering. If you change the props name in the parent component, you have to change it all the way
+down it.
+
+If you have Redux, you can work with the following structure.
+
+**the store** that contains the state change logic , we can directly inject the desired state value and function into the desired component.
+
+In this way, Redux is used for easier global state management, or for more systematic and convenient state management, but in the latter case,
+you will have to actually use it to experience it. So, shall we move on?
+
+## 1-2. Pre-arranging concepts
+
+Let\'s take a look at the keywords that you will encounter in the future. This is only a brief overview of the concept, so if you don\'t
+understand something along the way, you will understand it better if you come back to this section and read it again after using it yourself
+later.
+
+### Action
+
+When the state needs to change something, we fire something called an action. This is represented as a single object, and the action object
+has the following format.
+
+```json
+{
+    "type": "TOGGLE_VALUE"
+}
+```
+
+Action objects must have `a type `field, and other values can be entered as desired by the developer.
+
+`example:`
+
+```javascript
+{
+    type : "ADD_TODO" ,
+    data : {
+        id : 0 ,
+        text : "Learn Redux"
+    }
+}
+{
+    type : "CHANGE_INPUT" ,
+    text : "no"
+}
+```
+
+### Action Creator
+
+An action creator function is a function that creates an action. It simply takes parameters and turns them into an action object.
+
+```javascript
+function addTodo(data) {
+    return {
+        type: 'ADD_TODO',
+        data,
+    };
+}
+
+// Can also be made into an arrow function.
+const changeInput = (text) => ({
+    type: 'CHANGE_INPUT',
+    text,
+});
+```
+
+### Reducer
+
+A reducer is a function that causes a change. The reducer takes two
+parameters.
+
+```javascript
+function reducer(state, action) {
+    // state update logic
+    return alteredState;
+}
+```
+
+The reducer creates and returns a new state based on the current state
+and the received action. We will find out more about it later when
+implementing it.
+
+### Store
+
+In Redux, you create one store per application. Inside the store, we
+have the current app state, our reducers, plus a few built-in functions.
+
+### dispatch
+
+Dispatch is one of the store\'s built-in functions. You can understand
+dispatch as triggering an action. The action is passed as a parameter to
+the function called dispatch. Like dispatch(action).
+
+When you call it like that, the store executes the reducer function and
+creates a new state by referring to the action if there is logic that
+handles that action.
+
+### subscribe
+
+Subscriptions are also one of the store\'s built-in functions. The
+subscribe function receives a function-type value as a parameter. If you
+pass a specific function to the subscribe function, the function you
+passed in will be called whenever an action is dispatched.
