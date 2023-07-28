@@ -23,7 +23,7 @@ export default function BlogLayout({ post, children }) {
     return (
         <section className="mt-[44px] md:mt-[60px] relative !overflow-hidden">
             <section
-                className="p-5 sm:pt-10 relative font-barlow prose-base dark:prose-invert print:!mx-auto"
+                className="p-5 sm:pt-10 relative font-barlow prose prose-base dark:prose-invert print:!mx-auto"
                 style={{ maxWidth: '800px', margin: 'auto' }}
             >
                 <ScrollProgressBar />
