@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { getFormattedDate } from '@/utils/date';
-import useBookmarkedBlogs from '@/hooks/useBookmarkBlogs';
 
 export default function Blog({ blog }) {
     return (
@@ -12,8 +11,8 @@ export default function Blog({ blog }) {
                     alt={blog.title}
                     src={blog.image}
                     blurDataURL={blog.image}
-                    width={1200}
-                    height={630}
+                    width={442}
+                    height={232}
                     quality={25}
                     className="my-auto transition-all duration-300 backdrop-blur-xl rounded-xl"
                 />

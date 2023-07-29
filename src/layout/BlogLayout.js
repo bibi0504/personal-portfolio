@@ -37,8 +37,8 @@ export default function BlogLayout({ post, children }) {
                         <div className="flex items-center gap-2">
                             <div className="w-[40px]">
                                 <Image
-                                    height={933}
-                                    width={933}
+                                    height={40}
+                                    width={40}
                                     alt="Minato Hayashi"
                                     src="/images/profile.png"
                                     className="rounded-full !m-0"
